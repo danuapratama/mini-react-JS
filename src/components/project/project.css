@@ -1,0 +1,378 @@
+/*========== PORTFOLIO CATEGORY BUTTON ==========*/
+.portfolio-category {
+  display: flex;
+  overflow-x: auto;
+}
+
+.portfolio-category::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.portfolio-category button {
+  font-family: 'nunito';
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 0.3rem 1rem;
+  width: max-content;
+  margin: 0 0.5rem 0 0;
+  outline: none;
+  border: 1px solid #d1befd;
+  background: transparent;
+  color: var(--h1);
+  border-radius: 20px;
+}
+
+.portfolio-category button:hover {
+  background: hsl(258, 94%, 87%, 0.4);
+}
+
+.portfolio-category button.active {
+  background: #d1befd;
+  color: var(--h2);
+}
+
+/*========== PORTFOLIO SECTION ==========*/
+.portfolio .title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.portfolio .title .ctn-title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ctn-title h1 {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.ctn-title h4 {
+  font-size: 20px;
+  color: var(--h1);
+  font-weight: normal;
+}
+
+.ctn-title .highlight a {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.ctn-title .highlight a:hover {
+  text-decoration: underline;
+}
+
+.portfolio-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.portfolio-card .box {
+  padding: 0;
+  border-radius: 9px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background: var(--skills-color);
+  max-width: 400px;
+}
+
+.portfolio-card .box .box-img {
+  width: 100%;
+}
+
+.portfolio-card .box .box-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.portfolio-card .box h2 {
+  padding: 0 10px 0 10px;
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--h1);
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio-card .box h2 a {
+  color: var(--grey);
+  margin-top: 3px;
+  visibility: hidden;
+}
+
+.portfolio-card .box h2 a:hover {
+  color: var(--green);
+}
+
+.portfolio-card .box h3 {
+  padding: 0 10px 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: -0.5rem 0 10px;
+}
+
+/* .portfolio-card .box .btn {
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    color: var(--green);
+    padding: 20px 0 20px 0;
+    border-radius: 11px;
+  } */
+
+.portfolio-card .box .btn:hover {
+  background: var(--button-main-hover);
+}
+
+/* PORTFOLIO MODAL CONTENT */
+html.active-modal {
+  overflow: hidden;
+}
+
+.porto-modal.active-modal {
+  visibility: visible !important;
+}
+
+.porto-modal-btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  color: var(--green);
+  padding: 20px 0 20px 0;
+  border-radius: 11px;
+}
+
+.porto-modal-btn:hover {
+  text-decoration: underline;
+}
+
+.porto-modal-content .btn,
+.porto-modal-content .btn-repo {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 15px 0 15px 0;
+  border-radius: 8px;
+  margin-top: 30px;
+  background: var(--button-main);
+}
+
+.porto-modal-content .btn-repo {
+  padding: 14px 0 14px 0;
+  color: var(--button-fill);
+  background: none;
+  border: solid 1px var(--button-fill);
+  margin-top: 15px;
+}
+
+.porto-modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  min-height: 90vh;
+  background-color: rgba(14, 14, 14, 0.9);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  z-index: var(--z-modal);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.porto-modal-content {
+  position: relative;
+  width: 500px;
+  background-color: var(--modal-color);
+  padding: 4rem 1.5rem 1.5rem;
+  border-radius: 10px;
+  border: solid 1px var(--white);
+  overflow: auto;
+}
+
+.porto-modal-title,
+.porto-modal-description {
+  text-align: center;
+}
+
+.porto-modal-title {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: var(--h1);
+  margin-bottom: 1rem;
+}
+
+.porto-modal-description {
+  font-size: 15px;
+  margin-bottom: 2rem;
+}
+
+.porto-modal-list {
+  display: grid;
+  row-gap: 0.75rem;
+}
+
+.porto-modal-item {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.porto-modal-icon {
+  font-size: 1.5rem;
+  color: var(--button-main);
+}
+
+.porto-modal-info {
+  font-size: 14px;
+  color: var(--h1);
+}
+
+.porto-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--grey);
+}
+
+/*========== END ==========*/
+
+/*========== ACCORDION FAQ SECTION ==========*/
+.accordion-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5rem 0 5rem 0;
+  min-height: 0;
+}
+
+.accordion {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  padding: 45px 90px 45px 60px;
+}
+
+.accordion .image-box {
+  height: 360px;
+  width: 360px;
+}
+
+.accordion .image-box img {
+  margin-top: 10px;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.accordion .accordion-text {
+  width: 60%;
+}
+
+/* .accordion-container .title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--h1);
+    margin-bottom: 3rem;
+  } */
+
+.accordion .accordion-text .faq-text {
+  margin-top: 30px;
+  height: 100%;
+  /* box-shadow: rgba(90, 90, 90, 0.3) 0px -50px 16px -48px inset; */
+  border-radius: 0 0 8px 8px;
+  padding: 0 10px 30px 10px;
+}
+
+.faq-text::-webkit-scrollbar {
+  display: none;
+}
+
+.accordion .accordion-text .arrow {
+  list-style: none;
+  cursor: pointer;
+}
+
+.accordion-text li .question-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion-text li .question-arrow .question {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+  color: var(--h1);
+}
+
+.accordion-text li .question-arrow .arrow {
+  font-size: 20px;
+  color: var(--grey);
+  transition: all 0.5s ease;
+}
+
+.accordion-text li.showAnswer .question-arrow .arrow {
+  transform: rotate(-180deg);
+}
+
+.accordion-text li:hover .question-arrow .arrow {
+  color: var(--accordion-text);
+}
+
+.accordion-text li.showAnswer .question-arrow .question,
+.accordion-text li.showAnswer .question-arrow .arrow {
+  color: var(--accordion-text);
+}
+
+.accordion-text li .line {
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.accordion-text li.showAnswer .line {
+  background: var(--accordion-line);
+}
+
+.accordion-text li p {
+  width: 85%;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--h1);
+  padding: 0;
+  max-height: 0;
+  visibility: hidden;
+}
+
+.accordion-text li.showAnswer p {
+  padding: 0 0 10px 0;
+  max-height: 300px;
+  visibility: visible;
+}
+/*========== END ==========*/

@@ -1,0 +1,66 @@
+/*========== NAVBAR SECTION ==========*/
+.navbar.container {
+  max-width: 100%;
+  width: 100%;
+  padding: 10px;
+  margin-top: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+  background: var(--background-nav);
+  box-shadow: 0 0 4px rgba(14, 55, 63, 0.15);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list ul {
+  display: flex;
+  margin-right: 40px;
+}
+
+.nav-list ul li {
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+.nav-list a {
+  color: var(--grey);
+  font-family: 'nunito';
+  padding-bottom: 3px;
+  position: relative;
+  letter-spacing: 0.7px;
+}
+
+.nav-list a:hover,
+.nav-list a:hover::before,
+.nav-list .active {
+  color: var(--accordion-text);
+  width: 60%;
+  height: 2px;
+}
+
+.nav-list a::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  background: var(--accordion-text);
+  transition: 0.1s;
+  border-radius: 50px;
+}
+
+.navbar .logo img {
+  width: 100px;
+  margin: 5px 0 0 40px;
+}
+
+/*=== MOBILE NAV ICON ===*/
+.nav-list i::before {
+  display: none;
+}
+/*========== END ==========*/
