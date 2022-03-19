@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Homes, Abouts, Skillss, Projects, Footers } from './containers';
 import { Home, About, Skills, Project, Resources, Navbar } from './components';
 import { Routes, Route } from 'react-router-dom';
 

@@ -5,11 +5,11 @@
 }
 
 .home.container {
-  position: absolute;
+  position: relative;
   max-width: 100%;
   width: 100%;
-  margin: 5rem auto;
-  padding-bottom: 5rem;
+  margin: 5rem auto 5rem;
+  min-height: 0;
 }
 
 .home.container .row {
@@ -154,16 +154,17 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: var(--circle);
+  background: var(--button-main);
+  max-width: 100%;
   width: 80%;
   border-radius: 10px;
-  margin: -45px 0;
+  margin: -45px 0 3rem;
   left: 10%;
   padding: 20px;
 }
 
 .quote p {
-  color: var(--grey);
+  color: var(--white);
   width: 61%;
   font-size: 18px;
   font-weight: bold;
@@ -180,18 +181,31 @@
 }
 /*========== END ==========*/
 
-
 /*========== Modal Contact Mobile Version ==========*/
 .modal__button-main {
   background-color: var(--button-main);
   border: none !important;
+  outline: none !important;
   display: none;
   color: var(--white);
-  justify-content: center;
-  align-items: center;
+  padding: 15px;
+  margin-top: -30px;
+  margin-bottom: 50px;
+  width: 80%;
   border-radius: 12px;
-  letter-spacing: 0.05rem;
-  font-size: 15px;
+  z-index: 3;
+
+  -webkit-box-shadow: inset 1px 2px 6px rgba(0, 0, 0, 0.3), inset -1px -3px 5px rgba(0, 0, 0, 0.3), 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.3) !important;
+  -moz-box-shadow: inset 1px 2px 6px rgba(0, 0, 0, 0.3), inset -1px -3px 5px rgba(0, 0, 0, 0.3), 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.3) !important;
+  box-shadow: inset 1px 2px 6px rgba(255, 255, 255, 0.2), inset -1px -3px 5px rgba(0, 0, 0, 0.3), 0 0.15rem 0.15rem 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.modal__button-main:hover {
+  animation: none;
+  transition: all 0.2s ease;
+  transform: scale(0.97);
+  -ms-transform: scale(0.97); /* Support IE 9 */
+  -webkit-transform: scale(0.97); /* support Safari */
 }
 
 iframe {
@@ -206,6 +220,10 @@ iframe {
   padding: 10px 35px;
   border-radius: 10px;
   border: none !important;
+}
+
+.modal__button a:hover {
+  background: var(--button-main-hover);
 }
 
 .mail a {
@@ -237,7 +255,7 @@ iframe {
 .or .line1,
 .or .line2 {
   content: '';
-  max-width: 90px;
+  max-width: 100px;
   width: 100%;
   height: 1px;
   background: var(--grey);
@@ -257,57 +275,31 @@ iframe {
   height: 3px;
   background: var(--grey);
   border-radius: 20px;
-  margin: 10px auto 0;
+  margin: 10px auto 3rem;
 }
 
 .modal__container {
-  position: fixed;
+  position: relative;
   width: 100%;
-  left: 0;
   display: grid;
-  align-items: flex-end;
-  overflow: hidden;
-  z-index: var(--z-modal);
-  visibility: hidden;
-  opacity: 0;
-  background: rgba(17, 17, 17, 0.8);
-  transition: all 0.1s;
-  bottom: 0;
-  top: 0;
+  align-items: center;
+  place-items: center;
 }
 
 .modal__content {
-  position: fixed;
+  position: relative;
   text-align: center;
-  width: 100%;
-  border-radius: 27px 27px 0 0;
-  transition: all 0.5s;
-  transform: translateY(50%);
-  bottom: 0;
+  width: 50%;
+  border-radius: 10px;
+  background: white;
+  margin-bottom: 5rem;
+  padding: 0 0 3rem 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .modal__img {
   width: 170px;
   margin-top: 1rem;
-}
-
-.modal__close {
-  display: inline-flex;
-  border-radius: 0.25rem;
-  font-size: 2rem;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-}
-
-/*========== Show modal ==========*/
-.show-modal {
-  visibility: visible;
-  opacity: 1;
-}
-
-.show-modal .modal__content {
-  transform: translateY(0);
 }
 
 .contact-icons ul {
