@@ -2,7 +2,7 @@
 
 This project is my portfolio with the version of React JS I'm currently learning [Create React App](https://github.com/facebook/create-react-app).
 
-- [Live Preview](https://mini-reactjs.netlify.app/) 🚀
+[Live Preview](https://mini-reactjs.netlify.app/)
 
 ## Available Scripts
 
